@@ -1,0 +1,28 @@
+﻿商品分类网页命名：
+
+vocalConcert	演唱会
+music    音乐会
+drama   话剧歌剧
+child    儿童亲子
+musical  音乐剧
+variety  戏曲综艺
+exhibition	展览
+dance       芭蕾舞蹈
+item		场会信息
+pay   支付页面
+payPage		订单提交成功
+alipay		订单支付
+
+
+
+
+
+
+					<input type="hidden" id="js-city-url" value="http://www.juooo.com/">
+					<input type="hidden" id="js-retakepass-url" value="http://passport.juooo.com/User/retakepass">
+					<input type="hidden" id="js-qq-url" value="http://passport.juooo.com/Oauth/login?type=qq">
+					<input type="hidden" id="js-weixin-url" value="http://passport.juooo.com/Oauth/login?type=weixin">
+					<input type="hidden" id="js-sina-url" value="http://passport.juooo.com/Oauth/login?type=sina">
+					<input type="hidden" id="js-register-url" value="http://passport.juooo.com/User/register">
+					<input type="hidden" id="js-login-url" value="http://passport.juooo.com/user/makelogin">
+					<input type="hidden" id="js-alipay-url" value="">

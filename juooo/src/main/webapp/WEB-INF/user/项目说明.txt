@@ -1,0 +1,16 @@
+﻿网页命名
+myaccount            账户余额
+myaddress            收货地址
+mycollect            我的关注
+mycomment            我的评剧
+mycoupons            优惠券
+myhappycard          欢聚橙卡
+myintegral           我的积分
+myjuooo              我的聚橙
+mynote               消息提醒
+myorderlist          我的订单
+myprofile            个人资料
+myrecharge           橙卡
+myreserve            开售提醒
+mysecurity           账户安全
+mystock              缺货记录

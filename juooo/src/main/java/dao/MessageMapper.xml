@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+        <mapper namespace="dao.MessageMapper">
+        	
+        	<!-- <resultMap type="pojo.J_Message" id="messages">
+        		<id column="messageid" jdbcType="BIGINT" property="messageid" />
+        		<result property="informationClassificationId" jdbcType="BIGINT" column="informationclassificationid"/>
+        		<result property="informationForDetails" column="informationfordetails" javaType="String"/>
+        	</resultMap> -->
+        	
+        	<select id="getMessageMapping" resultType="J_Message">
+        		SELECT messageid,informationclassificationid,informationfordetails 
+        		FROM 
+        			j_message
+        	</select>
+        	
+        	<resultMap id="findMessages" type="J_Message">
+        		<id column="messageid" property="messageid" />
+        		<result column="informationclassificationid" property="informationclassificationid"/>
+        		<result column="informationfordetails" property="informationfordetails"/>
+        		<association property="icii" column="informationclassificationid">
+        			<id column="informationclassificationids" property="informationclassificationid"/>
+        			<result column="type" property="type"/>
+        		</association>
+        	</resultMap>
+        	<select id="findMessage" resultMap="findMessages" parameterType="J_Message">
+        		SELECT m.messageid,m.informationclassificationid,m.informationfordetails,m.title,m.dateline,m.introduction,i.informationclassificationid informationclassificationids,i.type
+				FROM j_message m
+				INNER JOIN j_informationclassification i ON m.informationclassificationid = i.informationclassificationid
+				ORDER BY dateline DESC
+        	</select>
+        </mapper>
